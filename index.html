@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image swipper</title>
+    <link rel="stylesheet" href="/gallery/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <button class="btn filter-btn" data-filter="all">All</button>
+        <button class="btn filter-btn" data-filter="small">Small</button>
+        <button class="btn filter-btn" data-filter="medium">Medium</button>
+        <button class="btn filter-btn" data-filter="large">Large</button>
+      </nav>
+    </header>
+    <main class="mb-5">
+      <div class="pop-current-image" id="popup">
+        <img src="" alt="" id="pop-img" />
+        <span id="close">&times</span>
+      </div>
+      <div class="container">
+        <div class="image-wrapper" id="imageWrapper"></div>
+      </div>
+    </main>
+
+    <script src="/gallery/app.js"></script>
+  </body>
+</html>

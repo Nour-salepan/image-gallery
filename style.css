@@ -1,0 +1,100 @@
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: calc(100% - 3rem);
+  max-width: 1000px;
+  margin-inline: auto;
+}
+.mb-5 {
+  margin-block-start: 7em;
+}
+.btn {
+  padding: 0.75em 1em;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 0.5em;
+  color: var(--light, #000000);
+  background-color: #fff;
+  transition: all 300ms ease-in-out;
+}
+.btn:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary, #1e90ff);
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-block: 1.5em;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-block-end: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+header > nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.image-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.image-wrapper img {
+  cursor: pointer;
+  transition: scale 300ms ease-in;
+}
+.image-wrapper img:hover {
+  transform: scale(1.03);
+}
+
+.pop-current-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: calc(100%);
+  padding-inline: 1em;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.pop-current-image[data-popup="true"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+#close {
+  position: absolute;
+  top: 7%;
+  right: 3%;
+  font-size: 3.5rem;
+  color: #fff;
+  cursor: pointer;
+}
