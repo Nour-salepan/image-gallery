@@ -21,4 +21,4 @@ This project is a simple web application that generates a gallery of animal imag
 1. Clone the repository to your local machine.
 
    ```bash
-   git clone https://github.com/your-username/animal-image-gallery.git
+ git remote add origin https://github.com/Nour-salepan/image-gallery.git
